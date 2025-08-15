@@ -73,7 +73,7 @@ To translate the final LASSO model's output into clinically meaningful metrics, 
 
 The analysis successfully built a high-performing model to predict patient outcomes and identified several key clinical factors associated with those outcomes.
 
-## <a id="final-model"></a>### Final Predictive Model
+## <a id="final-model"></a>Final Predictive Model
 
 The final LASSO regression model demonstrated **excellent predictive accuracy**, with an Area Under the Curve (AUC) of **0.9159**. An AUC this high indicates the model is very effective at distinguishing between patients who will have a "Good" versus a "Poor" outcome. The model identified four key predictors:
 
@@ -84,7 +84,7 @@ The final LASSO regression model demonstrated **excellent predictive accuracy**,
 
 ---
 
-## <a id="key-variable-associations"></a>### Key Variable Associations
+## <a id="key-variable-associations"></a>Key Variable Associations
 
 The univariable tests, which look at each variable individually, support the model's findings and provide additional context:
 
@@ -95,6 +95,6 @@ The univariable tests, which look at each variable individually, support the mod
 
 ---
 
-## <a id="overall-conclusion"></a>### Overall Conclusion
+## <a id="overall-conclusion"></a>Overall Conclusion
 
 The patient's functional status, both before the event and immediately after treatment, is the most critical determinant of their 3-month outcome. Neurological severity post-procedure and a key hematological factor (RBC count) also play significant roles. The model is robust and provides a clear, interpretable set of variables for predicting patient recovery.
