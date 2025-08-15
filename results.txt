@@ -1,0 +1,268 @@
+=========================================================
+          STATISTICAL ANALYSIS RESULTS REPORT          
+=========================================================
+
+
+--- FINAL MODEL RESULTS (TOP PREDICTORS FROM LASSO) ---
+
+
+
+Table: Final LASSO Model Predictors
+
+|                      |Variable              | OddsRatio|
+|:---------------------|:---------------------|---------:|
+|DischargeMRS          |DischargeMRS          | 2.2035632|
+|MRSbase_manual        |MRSbase_manual        | 1.1071946|
+|PostThrombectomyNIHSS |PostThrombectomyNIHSS | 1.0269484|
+|RBC                   |RBC                   | 0.8859089|
+|(Intercept)           |(Intercept)           | 0.1672700|
+
+
+
+--- STARTING ADVANCED ANALYSES ---
+
+--- 1. Model Performance (AUC/ROC) ---
+
+Area Under the Curve (AUC): 0.9159 
+
+
+
+--- 2. GROUP COMPARISON TESTS (UNIVARIABLE) ---
+
+ T-test for variable: gcsadm 
+
+
+
+| estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low| conf.high|method                  |alternative |
+|--------:|---------:|---------:|---------:|-------:|---------:|---------:|---------:|:-----------------------|:-----------|
+| 1.462694|  14.09859|   12.6359|  6.094931|       0|  323.2112| 0.9905635|  1.934825|Welch Two Sample t-test |two.sided   |
+
+ T-test for variable: mrsarrival 
+
+
+
+|  estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low|  conf.high|method                  |alternative |
+|---------:|---------:|---------:|---------:|-------:|---------:|---------:|----------:|:-----------------------|:-----------|
+| -1.261213|  2.246479|  3.507692|  -7.24247|       0|  284.1439| -1.603984| -0.9184427|Welch Two Sample t-test |two.sided   |
+
+ T-test for variable: MRSbase_manual 
+
+
+
+|   estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low|  conf.high|method                  |alternative |
+|----------:|---------:|---------:|---------:|-------:|---------:|---------:|----------:|:-----------------------|:-----------|
+| -0.9234381| 0.2816901|  1.205128| -7.326393|       0|  293.3807| -1.171501| -0.6753757|Welch Two Sample t-test |two.sided   |
+
+ T-test for variable: PreThrombectomyNIHSS 
+
+
+
+|  estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low| conf.high|method                  |alternative |
+|---------:|---------:|---------:|---------:|-------:|---------:|---------:|---------:|:-----------------------|:-----------|
+| -6.515421|  8.028169|  14.54359| -8.572567|       0|  324.5233| -8.010631|  -5.02021|Welch Two Sample t-test |two.sided   |
+
+ T-test for variable: GCSdis 
+
+
+
+| estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low| conf.high|method                  |alternative |
+|--------:|---------:|---------:|---------:|-------:|---------:|---------:|---------:|:-----------------------|:-----------|
+| 1.279126|  14.78169|  13.50256|  6.342122|       0|   289.915| 0.8821689|  1.676083|Welch Two Sample t-test |two.sided   |
+
+ T-test for variable: DischargeMRS 
+
+
+
+|  estimate| estimate1| estimate2| statistic| p.value| parameter|  conf.low| conf.high|method                  |alternative |
+|---------:|---------:|---------:|---------:|-------:|---------:|---------:|---------:|:-----------------------|:-----------|
+| -2.410437|  1.640845|  4.051282| -17.02313|       0|  241.0639| -2.689364|  -2.13151|Welch Two Sample t-test |two.sided   |
+
+ Chi-squared test for variable: sex 
+
+
+
+| statistic|   p.value| parameter|method                                                       |
+|---------:|---------:|---------:|:------------------------------------------------------------|
+|  12.67011| 0.0003715|         1|Pearson's Chi-squared test with Yates' continuity correction |
+
+ Chi-squared test for variable: htn 
+
+
+
+| statistic| p.value| parameter|method                                                       |
+|---------:|-------:|---------:|:------------------------------------------------------------|
+|         0|       1|         1|Pearson's Chi-squared test with Yates' continuity correction |
+
+
+
+--- 3. ODDS RATIOS WITH 95% CONFIDENCE INTERVALS ---
+
+
+
+Table: Odds Ratios and 95% Confidence Intervals
+
+|term                  |  estimate| std.error| statistic|   p.value|  conf.low| conf.high|
+|:---------------------|---------:|---------:|---------:|---------:|---------:|---------:|
+|DischargeMRS          | 2.6893798| 0.1384063|  7.147870| 0.0000000| 2.0774985| 3.5828093|
+|MRSbase_manual        | 1.6403988| 0.1641032|  3.016026| 0.0025611| 1.2052471| 2.3019255|
+|PostThrombectomyNIHSS | 1.1000227| 0.0308172|  3.093434| 0.0019785| 1.0380528| 1.1719173|
+|RBC                   | 0.4452874| 0.2697279| -2.999450| 0.0027047| 0.2578533| 0.7448227|
+
+Forest plot saved to plots/forest_plot.png
+
+
+
+--- 4. SPEARMAN CORRELATION OF KEY NUMERIC VARIABLES ---
+
+
+Correlogram saved to plots/correlogram.png
+
+
+
+--- 5. ADDITIONAL DIAGNOSTIC AND MODEL PLOTS ---
+
+Generating Variable Importance Plot...
+Variable importance plot saved to plots/variable_importance.png
+
+Generating Calibration Plot...
+Calibration plot saved to plots/calibration_plot.png
+
+Generating Density Plots...
+
+Generating Normality Check Plots...
+
+
+Generating Chi-squared Tests and Plots for Top 50 Categorical Variables...
+
+--- Chi-squared test for Top 50 variable: Time_StrokeAddress ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|   34.2073| 0.7646416|        41|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: TransferTime ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  50.94569| 0.1894289|        43|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: NIHSSBeforeAdmission ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  25.92198| 0.5773333|        28|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: motor ---
+
+
+
+| statistic| p.value| parameter|method                     |
+|---------:|-------:|---------:|:--------------------------|
+|  40.14495|   4e-07|         6|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: walkstatus ---
+
+
+
+| statistic| p.value| parameter|method                     |
+|---------:|-------:|---------:|:--------------------------|
+|  37.23323|       0|         2|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: DNRDNI ---
+
+
+
+| statistic| p.value| parameter|method                     |
+|---------:|-------:|---------:|:--------------------------|
+|  33.51702|   3e-07|         3|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: weak ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  25.73958| 0.0011636|         8|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: clotlocation ---
+
+
+
+| statistic|  p.value| parameter|method                     |
+|---------:|--------:|---------:|:--------------------------|
+|  16.34872| 0.059947|         9|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: TimetoDNRDNI ---
+
+
+
+| statistic| p.value| parameter|method                     |
+|---------:|-------:|---------:|:--------------------------|
+|   33.2708| 1.1e-06|         4|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: VesselDSA ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  8.922536| 0.5394707|        10|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: Ins_Type ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  11.46984| 0.1193975|         7|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: CTfinding ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  13.29764| 0.0207436|         5|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: pT_EarlyCTFinding ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  11.76612| 0.0673944|         6|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: monthandage ---
+
+
+
+| statistic| p.value| parameter|method                     |
+|---------:|-------:|---------:|:--------------------------|
+|  25.15608| 3.4e-06|         2|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: InterHospDistance ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  8.428634| 0.4915926|         9|Pearson's Chi-squared test |
+
+--- Chi-squared test for Top 50 variable: VesselCTA ---
+
+
+
+| statistic|   p.value| parameter|method                     |
+|---------:|---------:|---------:|:--------------------------|
+|  9.648732| 0.4718325|        10|Pearson's Chi-squared test |
+
+
+=========================================================
+                      END OF REPORT                      
+=========================================================

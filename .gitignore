@@ -1,0 +1,6 @@
+*.Rproj
+*.Rproj.*
+*.RData
+*.Rhistory
+*.Rapp.history
+*.csv
