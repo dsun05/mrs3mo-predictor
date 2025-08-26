@@ -4,3 +4,4 @@
 *.Rhistory
 *.Rapp.history
 *.csv
+.Rproj.user

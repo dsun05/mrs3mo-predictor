@@ -34,7 +34,7 @@ cols_to_make_numeric <- c(
 # UPDATED: Use the specific list of variables for group and correlation tests
 numeric_vars_for_tests <- c(
   "gcsadm", "mrsarrival", "InitialNIHSS", "MRSbase_manual", 
-  "PreThrombectomyNIHSS", "PreThrombectomyGCS", "GCSdis", "DischargeMRS"
+  "PreThrombectomyNIHSS", "PostThrombectomyNIHSS", "PreThrombectomyGCS", "GCSdis", "DischargeMRS"
 )
 # Note: mrs3mo is the outcome, so it's not included here as a predictor to test.
 # Add any categorical variables for Chi-squared tests below
